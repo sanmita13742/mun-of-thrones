@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Resources - MUN of Thrones</title>
+    <link rel="stylesheet" href="css/update-style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/charts.js" defer></script> <!-- Use defer to ensure scripts load after HTML -->
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">MUN OF THRONES</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Games</a>
+                <a href="#leaderboard" class="nav-link">Leaderboard</a>
+                <a href="update.html" class="nav-link">Update</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Inputs Section -->
+    <section class="input-section">
+        <h2>Update Country Resources</h2>
+
+        <!-- Country Selection -->
+        <label for="countrySelect">Choose a country:</label>
+        <select id="countrySelect">
+            <option value="Country 1">Country 1</option>
+            <option value="Country 2">Country 2</option>
+            <option value="Country 3">Country 3</option>
+            <option value="Country 4">Country 4</option>
+            <option value="Country 5">Country 5</option>
+            <option value="Country 6">Country 6</option>
+            <option value="Country 7">Country 7</option>
+            <option value="Country 8">Country 8</option>
+            <option value="Country 9">Country 9</option>
+            <option value="Country 10">Country 10</option>
+        </select>
+
+        <!-- Resource Type Selection -->
+        <label for="resourceSelect">Choose a resource:</label>
+        <select id="resourceSelect">
+            <option value="Army">Army</option>
+            <option value="Silver">Silver</option>
+            <option value="Gold">Gold</option>
+        </select>
+
+        <!-- Input for resource value -->
+        <label for="resourceValue">Enter the new resource value:</label>
+        <input type="number" id="resourceValue" placeholder="Enter value">
+
+        <!-- Update Button -->
+        <button id="updateButton">Update Resource</button>
+    </section>
+
+    <!-- Invasion Section -->
+    <section class="input-section">
+        <h2>Simulate Invasion</h2>
+
+        <!-- Invader Country Selection -->
+        <label for="invaderSelect">Invader Country:</label>
+        <select id="invaderSelect">
+            <option value="Country 1">Country 1</option>
+            <option value="Country 2">Country 2</option>
+            <option value="Country 3">Country 3</option>
+            <option value="Country 4">Country 4</option>
+            <option value="Country 5">Country 5</option>
+            <option value="Country 6">Country 6</option>
+            <option value="Country 7">Country 7</option>
+            <option value="Country 8">Country 8</option>
+            <option value="Country 9">Country 9</option>
+            <option value="Country 10">Country 10</option>
+        </select>
+
+        <!-- Invaded Country Selection -->
+        <label for="invadedSelect">Invaded Country:</label>
+        <select id="invadedSelect">
+            <option value="Country 1">Country 1</option>
+            <option value="Country 2">Country 2</option>
+            <option value="Country 3">Country 3</option>
+            <option value="Country 4">Country 4</option>
+            <option value="Country 5">Country 5</option>
+            <option value="Country 6">Country 6</option>
+            <option value="Country 7">Country 7</option>
+            <option value="Country 8">Country 8</option>
+            <option value="Country 9">Country 9</option>
+            <option value="Country 10">Country 10</option>
+        </select>
+
+        <!-- Invasion Percentage -->
+        <label for="percentInput">Invasion Percentage:</label>
+        <input type="number" id="percentInput" placeholder="Enter percentage (1-100)" min="1" max="100">
+
+        <!-- Invade Button -->
+        <button id="invadeButton">Invade</button>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="charts-section">
+        <h2>Country Data Visualization</h2>
+        <!-- Pie Chart -->
+        <div id="donutchart" class="chart"></div>
+        <!-- Column Chart -->
+        <div id="columnchart_values" class="chart"></div>
+    </section>
+
+    <!-- Invasion Message Section -->
+    <section>
+        <div id="invasionMessage" style="font-weight: bold; color: red;"></div>
+    </section>
+
+</body>
+</html>

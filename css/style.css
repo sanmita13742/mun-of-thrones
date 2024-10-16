@@ -1,0 +1,259 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+.header {
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #0c1445, #080c1d);
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+/* Start Button Styles */
+.start-button {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center the button horizontally */
+    align-items: center; /* Center the button vertically */
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Increased gap for better spacing */
+    padding: 16px 36px;
+    border: 4px solid transparent; /* Border color is transparent by default */
+    border-radius: 50px; /* Slightly less rounded corners for a modern look */
+    font-size: 18px; /* Increased font size for better readability */
+    font-weight: 600;
+    color: #1f387e; /* Button text color */
+    box-shadow: 0 0 0 2px #ffffff; /* White outer shadow */
+    cursor: pointer; /* Pointer on hover */
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); /* Smooth transition */
+}
+
+.animated-button svg {
+    position: absolute;
+    width: 24px; /* Fixed width for SVG icons */
+    fill: #1f387e; /* Icon color */
+    z-index: 9; /* Layering for the icon */
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1); /* Smooth transition */
+}
+
+.animated-button .arr-1 {
+    right: 16px; /* Position the first arrow on the right */
+}
+
+.animated-button .arr-2 {
+    left: -25%; /* Position the second arrow outside the button */
+}
+
+.animated-button .circle {
+    position: absolute;
+    top: 50%; /* Center the circle vertically */
+    left: 50%; /* Center the circle horizontally */
+    transform: translate(-50%, -50%); /* Offset for exact centering */
+    width: 20px; /* Initial width of the circle */
+    height: 20px; /* Initial height of the circle */
+    background-color: #c5e5e4; /* Circle color */
+    border-radius: 50%; /* Make it a circle */
+    opacity: 0; /* Initially invisible */
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1); /* Smooth transition */
+}
+
+.animated-button .text {
+    position: relative;
+    z-index: 1; /* Above other elements */
+    transform: translateX(-12px); /* Initial shift for animation */
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1); /* Smooth transition */
+}
+
+.animated-button:hover {
+    box-shadow: 0 0 0 12px transparent; /* Shadow effect on hover */
+    color: #212121; /* Change text color on hover */
+}
+
+.animated-button:hover .arr-1 {
+    right: -25%; /* Animate the first arrow off-screen */
+}
+
+.animated-button:hover .arr-2 {
+    left: 16px; /* Animate the second arrow in */
+}
+
+.animated-button:hover .text {
+    transform: translateX(12px); /* Shift text right on hover */
+}
+
+.animated-button:hover svg {
+    fill: #1f387e; /* Icon color remains same on hover */
+}
+
+.animated-button:active {
+    transform: scale(0.95); /* Scale effect on click */
+    box-shadow: 0 0 0 4px rgb(109, 182, 213); /* Shadow effect when active */
+}
+
+.animated-button:hover .circle {
+    width: 220px; /* Expand the circle on hover */
+    height: 220px; /* Expand the circle on hover */
+    opacity: 1; /* Make the circle visible */
+}
+
+/* Games Grid */
+.games-section {
+    padding: 50px 0;
+    background-color: #1f1f1f;
+}
+
+.games-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.game-card {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #23272a 0%, #2c2f33 100%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #350803, #570e08);
+}
+/* Country Page Styles */
+/* Country Page Styles */
+.country-section {
+    padding: 50px 0;
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+}
+
+.country-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Charts Container: Flexbox for Side-by-Side Layout */
+.charts-container {
+    display: flex;
+    justify-content: space-between; /* Space between charts */
+    gap: 20px; /* Gap between charts */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    padding: 0 20px; /* Padding for responsive layout */
+}
+
+.chart {
+    flex: 1; /* Allow charts to grow equally */
+    min-width: 300px; /* Minimum width for better responsiveness */
+    max-width: 600px; /* Prevent charts from becoming too wide */
+    height: 400px; /* Fixed height for charts */
+    background-color: #23272a; /* Dark background for charts */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the charts */
+    margin: 20px 0; /* Margin between charts */
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Dark footer background */
+    padding: 20px; /* Padding inside footer */
+    text-align: center; /* Centered text in footer */
+    color: white; /* White text color */
+    margin-top: 50px; /* Space above footer */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .chart {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .charts-container {
+        flex-direction: column; /* Stack charts on top of each other */
+        align-items: center; /* Center align charts */
+    }
+}

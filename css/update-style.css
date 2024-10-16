@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Use the same font as in Country1 */
+    background-color: #1f1f1f; /* Same background color */
+    color: #ffffff; /* White text for better contrast */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.header {
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Input Section Styles */
+.input-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #23272a; /* Same background for input section */
+    border-radius: 10px; /* Rounded corners for input section */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Add shadow */
+    margin: 20px; /* Space around the input section */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #ffffff; /* White text for labels */
+}
+
+input,
+select,
+button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px; /* Rounded corners for inputs and buttons */
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff; /* Same button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Charts Section Styles */
+.charts-section {
+    display: flex; /* Flexbox to align charts side by side */
+    justify-content: space-between; /* Space out the charts evenly */
+    padding: 20px;
+}
+
+/* Chart Styles */
+.chart {
+    flex: 1; /* Allow charts to grow and shrink equally */
+    margin: 0 10px; /* Add horizontal margin between charts */
+    height: 400px; /* Set fixed height for charts */
+    background-color: #23272a; /* Background color for charts */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+    border-radius: 10px; /* Rounded corners for charts */
+    padding: 20px; /* Padding inside the chart containers */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .charts-section {
+        flex-direction: column; /* Stack charts vertically on small screens */
+        align-items: center; /* Center align on smaller screens */
+    }
+
+    .chart {
+        width: 100%; /* Full width for charts on small screens */
+        height: auto; /* Auto height for responsive design */
+        margin: 20px 0; /* Add vertical margin when stacked */
+    }
+}
