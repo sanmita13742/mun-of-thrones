@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Directives</title>
+    <link rel="stylesheet" href="css\d_updates.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+<div class="container">
+    <h1>Update Directives</h1>
+
+    <div class="form-group">
+        <label for="directiveText">New Directive:</label>
+        <textarea id="directiveText" rows="5" placeholder="Enter the new directive"></textarea>
+    </div>
+
+    <button id="updateDirectiveButton">Update Directive</button>
+
+    <h2>Current Directives</h2>
+    <p id="currentDirectives">
+        <!-- Updated directives will be displayed here -->
+    </p>
+</div>
+
+<script>
+// Retrieve existing directives from localStorage or set a default message
+let directives = JSON.parse(localStorage.getItem('directives')) || "No important directives at the moment.";
+
+// Display the current directive
+document.getElementById("currentDirectives").innerText = directives;
+
+// Event listener for updating the directive
+document.getElementById("updateDirectiveButton").addEventListener("click", function () {
+    const newDirective = document.getElementById("directiveText").value;
+
+    if (newDirective.trim()) {
+        directives = newDirective; // Update the directive message
+        localStorage.setItem('directives', JSON.stringify(directives)); // Store in localStorage
+
+        // Update the displayed directive
+        document.getElementById("currentDirectives").innerText = directives;
+
+        alert("Directive updated successfully!");
+    } else {
+        alert("Please enter a valid directive.");
+    }
+});
+</script>
+
+</body>
+</html>
